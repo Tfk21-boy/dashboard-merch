@@ -309,9 +309,31 @@ function closeModal() {
 function createModalContent(product) {
     return `
         <div class="modal-grid">
-            <div class="modal-image">
-                <img src="${product.image}" alt="${product.name}">
+            <!-- Kolom kiri: Gambar + CTA di bawahnya -->
+            <div class="modal-left-column">
+                <div class="modal-image">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                
+                <!-- CTA Box DI BAWAH GAMBAR -->
+                <div class="cta-box">
+                    <h3 class="cta-title">Interested in this product?</h3>
+                    <p class="cta-subtitle">Contact us to purchase</p>
+                    <div class="cta-buttons-horizontal">
+                        <a href="https://wa.me/1234567890" target="_blank" class="cta-btn-icon whatsapp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="cta-btn-icon instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="cta-btn-icon tiktok" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Kolom kanan: Info produk -->
             <div class="modal-info">
                 <div class="modal-category ${product.category}">
                     ${product.category === 'album' ? 'Album' : 'Merchandise'}
@@ -322,22 +344,6 @@ function createModalContent(product) {
                 </div>
                 <p class="modal-description">${product.description}</p>
                 <div class="modal-price">$${product.price.toFixed(2)}</div>
-                
-                <!-- Contact Section -->
-                <div class="contact-section">
-                    <h3 class="contact-title">Interested in this product? Contact us to purchase</h3>
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/1234567890" target="_blank" class="contact-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="contact-btn instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" class="contact-btn tiktok">
-                            <i class="fab fa-tiktok"></i> TikTok
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     `;

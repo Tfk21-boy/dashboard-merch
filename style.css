@@ -755,3 +755,71 @@ body {
 .product-image:not(:has(img)) i {
     display: block; /* Tampilkan icon jika tidak ada gambar */
 }
+
+/* CTA Box styling dengan tombol kecil */
+.cta-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+.cta-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Tombol icon kecil sebaris */
+.cta-buttons-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-btn-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn-icon.whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.cta-btn-icon.instagram {
+    background: linear-gradient(45deg, #405DE6, #C13584);
+}
+
+.cta-btn-icon.tiktok {
+    background: linear-gradient(135deg, #000000, #25F4EE, #FE2C55);
+}
+
+@media (max-width: 768px) {
+    .cta-btn-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
